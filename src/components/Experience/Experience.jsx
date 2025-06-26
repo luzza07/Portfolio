@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { FaCss3, FaHtml5, FaJs, FaReact } from 'react-icons/fa';
 import { SiPhp, SiPython, SiMongodb, SiMysql, SiTailwindcss, SiNextdotjs, SiDjango, SiPostgresql } from 'react-icons/si';
 
@@ -7,7 +7,7 @@ const Experience = () => {
     <div id="experience" className="w-full bg-[#0f172a] text-white py-16 px-6 md:px-24">
       {/* Skills Section */}
       <section className="mb-16">
-        <h1 className="text-3xl md:text-5xl font-bold mb-8 text-center">Skills</h1>
+        <h1 className="mb-8 text-3xl font-bold text-center md:text-5xl">Skills</h1>
         <div className="flex flex-wrap justify-center gap-8">
           {/* Skill Icons */}
           {[ 
@@ -24,7 +24,7 @@ const Experience = () => {
             { icon: <SiDjango color="#092E20" size={50} /> },
             { icon: <SiPostgresql color="#336791" size={50} /> },
           ].map((item, index) => (
-            <div key={index} className="bg-white/10 p-4 rounded-2xl hover:scale-110 transition-transform duration-300 shadow-md">
+            <div key={index} className="p-4 transition-transform duration-300 shadow-md bg-white/10 rounded-2xl hover:scale-110">
               {item.icon}
             </div>
           ))}
@@ -33,13 +33,13 @@ const Experience = () => {
 
       {/* Experience Section */}
       <section className="mb-16">
-        <h1 className="text-3xl md:text-5xl font-bold mb-8 text-center">Work Experience</h1>
+        <h1 className="mb-8 text-3xl font-bold text-center md:text-5xl">Work Experience</h1>
         <div className="flex flex-col gap-8">
           {/* Job 1 */}
-          <div className="bg-white/10 p-6 rounded-2xl shadow-md hover:bg-white/20 transition-all">
+          <div className="p-6 transition-all shadow-md bg-white/10 rounded-2xl hover:bg-white/20">
             <h2 className="text-2xl font-semibold">Cloco Nepal Inc.</h2>
-            <p className="text-sm text-gray-400 mb-3">Jan 2025 - April 2025</p>
-            <ul className="list-disc list-inside text-gray-300 space-y-2">
+            <p className="mb-3 text-sm text-gray-400">Jan 2025 - April 2025</p>
+            <ul className="space-y-2 text-gray-300 list-disc list-inside">
               <li>Built web applications using HTML, CSS, JavaScript, TypeScript, Python, and Django.</li>
               <li>Created responsive UI using ShadCN components, integrated with PostgreSQL backend.</li>
               <li>Collaborated in a team environment using Git and GitHub workflows.</li>
@@ -48,10 +48,10 @@ const Experience = () => {
           </div>
 
           {/* Job 2 */}
-          <div className="bg-white/10 p-6 rounded-2xl shadow-md hover:bg-white/20 transition-all">
+          <div className="p-6 transition-all shadow-md bg-white/10 rounded-2xl hover:bg-white/20">
             <h2 className="text-2xl font-semibold">Infography Technologies</h2>
-            <p className="text-sm text-gray-400 mb-3">Dec 2024 - Jan 2025</p>
-            <ul className="list-disc list-inside text-gray-300 space-y-2">
+            <p className="mb-3 text-sm text-gray-400">Dec 2024 - Jan 2025</p>
+            <ul className="space-y-2 text-gray-300 list-disc list-inside">
               <li>Developed mobile-friendly React and Next.js applications with responsive design.</li>
               <li>Handled state management and API integration using component-based architecture.</li>
               <li>Applied UI/UX best practices for clean and intuitive interfaces.</li>
