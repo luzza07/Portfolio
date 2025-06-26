@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { RiCloseLine, RiMenu3Line } from '@remixicon/react';
 
 const Navbar = () => {
@@ -28,32 +28,32 @@ const Navbar = () => {
 
   return (
     <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-[#0a0b15]/95 backdrop-blur-md py-3 shadow-lg' : 'bg-transparent py-6'}`}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center">
+      <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between">
           {/* Logo/Brand */}
           <a 
             href="#" 
-            className="text-3xl font-bold tracking-tight bg-gradient-to-r from-yellow-400 to-amber-500 bg-clip-text text-transparent hover:from-yellow-300 hover:to-amber-400 transition-all duration-300"
+            className="text-3xl font-bold tracking-tight text-transparent transition-all duration-300 bg-gradient-to-r from-yellow-400 to-amber-500 bg-clip-text hover:from-yellow-300 hover:to-amber-400"
           >
             Portfolio
           </a>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="items-center hidden space-x-8 md:flex">
             <NavLink href="#About" text="About" />
             <NavLink href="#Experience" text="Experience" />
             <NavLink href="#Projects" text="Projects" />
             <NavLink href="#Contact" text="Contact" />
-            <button className="px-6 py-2 bg-gradient-to-r from-amber-500 to-yellow-500 text-black font-medium rounded-lg hover:from-amber-400 hover:to-yellow-400 transition-all duration-300 hover:shadow-lg hover:shadow-amber-500/30">
+            <button className="px-6 py-2 font-medium text-black transition-all duration-300 rounded-lg bg-gradient-to-r from-amber-500 to-yellow-500 hover:from-amber-400 hover:to-yellow-400 hover:shadow-lg hover:shadow-amber-500/30">
               Resume
             </button>
           </div>
 
           {/* Mobile menu button */}
-          <div className="md:hidden flex items-center">
+          <div className="flex items-center md:hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white focus:outline-none"
+              className="inline-flex items-center justify-center p-2 text-gray-400 rounded-md hover:text-white focus:outline-none"
               aria-expanded="false"
             >
               <span className="sr-only">Open main menu</span>
@@ -74,7 +74,7 @@ const Navbar = () => {
           <MobileNavLink href="#Experience" text="Experience" onClick={handleNavClick} />
           <MobileNavLink href="#Projects" text="Projects" onClick={handleNavClick} />
           <MobileNavLink href="#Contact" text="Contact" onClick={handleNavClick} />
-          <button className="w-full px-6 py-3 bg-gradient-to-r from-amber-500 to-yellow-500 text-black font-medium rounded-lg hover:from-amber-400 hover:to-yellow-400 transition-all duration-300 mt-4">
+          <button className="w-full px-6 py-3 mt-4 font-medium text-black transition-all duration-300 rounded-lg bg-gradient-to-r from-amber-500 to-yellow-500 hover:from-amber-400 hover:to-yellow-400">
             Download Resume
           </button>
         </div>
@@ -87,7 +87,7 @@ const Navbar = () => {
 const NavLink = ({ href, text }) => (
   <a
     href={href}
-    className="relative text-lg font-medium text-gray-300 hover:text-white transition-colors duration-300 group"
+    className="relative text-lg font-medium text-gray-300 transition-colors duration-300 hover:text-white group"
   >
     {text}
     <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-amber-400 to-yellow-400 transition-all duration-300 group-hover:w-full"></span>
@@ -99,7 +99,7 @@ const MobileNavLink = ({ href, text, onClick }) => (
   <a
     href={href}
     onClick={onClick}
-    className="block px-3 py-3 rounded-md text-lg font-medium text-gray-300 hover:text-white hover:bg-gray-900/50 transition-colors duration-300"
+    className="block px-3 py-3 text-lg font-medium text-gray-300 transition-colors duration-300 rounded-md hover:text-white hover:bg-gray-900/50"
   >
     {text}
   </a>

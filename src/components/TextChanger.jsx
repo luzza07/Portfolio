@@ -1,4 +1,4 @@
-import React from 'react'
+
 import { useState,useEffect } from 'react'
 
 const TextChanger = () => {
@@ -32,7 +32,7 @@ const TextChanger = () => {
     }, [endValue,isForward,index,texts])
     
   return (
-    <div className='transition ease duration-300'>{currentText}</div>
+    <div className='transition duration-300 ease'>{currentText}</div>
   )
 }
 
