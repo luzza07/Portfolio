@@ -69,7 +69,7 @@ const Navbar = () => {
                 <NavLink href="#about" text="About" />
                 <NavLink href="#experience" text="Experience" />
                 <NavLink href="#projects" text="Projects" />
-                <NavLink href="#contact" text="Contact" />
+                <NavLink href="#footer" text="Contact" />
               </div>
 
               {/* Enhanced Resume Button */}
@@ -77,7 +77,7 @@ const Navbar = () => {
                 <button
                   onClick={() =>
                     window.open(
-                      "https://drive.google.com/uc?id=1CR3-mlr8DDj6ixssFsNdLJab2pwa6NuL&export=download",
+                      "https://drive.google.com/file/d/1gEvDi0PrJAqQMTWAW_JRf7EnX1pDh83k/view?usp=drive_link",
                       "_blank",
                     )
                   }
@@ -134,7 +134,7 @@ const Navbar = () => {
               <MobileNavLink href="#about" text="About" onClick={handleNavClick} />
               <MobileNavLink href="#experience" text="Experience" onClick={handleNavClick} />
               <MobileNavLink href="#projects" text="Projects" onClick={handleNavClick} />
-              <MobileNavLink href="#contact" text="Contact" onClick={handleNavClick} />
+              <MobileNavLink href="#footer" text="Contact" onClick={handleNavClick} />
             </div>
 
             {/* Mobile Resume Button */}
@@ -142,7 +142,7 @@ const Navbar = () => {
               <button
                 onClick={() => {
                   window.open(
-                    "https://drive.google.com/uc?id=1CR3-mlr8DDj6ixssFsNdLJab2pwa6NuL&export=download",
+                    "https://https://drive.google.com/file/d/1gEvDi0PrJAqQMTWAW_JRf7EnX1pDh83k/view?usp=drive_link&export=download",
                     "_blank",
                   )
                   handleNavClick()

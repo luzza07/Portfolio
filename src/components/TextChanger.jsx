@@ -3,7 +3,7 @@ import { useState,useEffect } from 'react'
 
 const TextChanger = () => {
 
-    const texts=["Hi,I'm Luzza Dangol","Hi,I'm Luzza Dangol","Hi,I'm Luzza Dangol"]
+    const texts=[" Luzza Dangol"," Luzza Dangol"," Luzza Dangol"]
     const [currentText,setCurrentText]=useState("");
     const [endValue,setEndValue] = useState(true);
     const [isForward,setIsForward]=useState(true);
