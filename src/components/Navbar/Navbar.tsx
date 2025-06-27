@@ -52,7 +52,7 @@ const Navbar = () => {
             {/* Enhanced Logo/Brand */}
             <div className="relative group">
               <a
-                href="#"
+                href="/"
                 className="relative text-3xl font-bold tracking-tight text-transparent transition-all duration-500 bg-gradient-to-r from-yellow-400 via-orange-400 to-yellow-500 bg-clip-text hover:from-yellow-300 hover:via-orange-300 hover:to-yellow-400 hover:scale-105"
               >
                 Portfolio
