@@ -5,7 +5,7 @@ import Experience from "./components/Experience/Experience";
 import Projects from "./components/Projects/Projects";
 import Footer from "./components/Footer/Footer";
 
-import { motion } from "framer-motion"; 
+import { motion } from "framer-motion";
 
 function App() {
   return (

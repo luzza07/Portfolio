@@ -1,45 +1,84 @@
-
-
 const About = () => {
   return (
-    <div id="about" className="w-full bg-[#0f172a] text-white py-16 px-6 md:px-24">
-      <div className="mx-auto max-w-7xl">
-        {/* Title */}
-        <h2 className="mb-12 text-4xl font-bold text-center md:text-5xl">About Me</h2>
+    <div
+      id="about"
+      className="relative w-full px-6 py-20 overflow-hidden text-white bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 md:px-24"
+    >
+      {/* Background Pattern */}
+      <div className="absolute inset-0 opacity-5">
+        <div className="absolute top-0 left-0 bg-yellow-400 rounded-full w-96 h-96 blur-3xl"></div>
+        <div className="absolute bottom-0 right-0 bg-blue-400 rounded-full w-96 h-96 blur-3xl"></div>
+      </div>
 
-        {/* Flexbox Container */}
-        <div className="flex flex-col items-start gap-16 md:flex-row">
-          
+      <div className="relative mx-auto max-w-7xl">
+        {/* Title Section */}
+        <div className="mb-16 text-center">
+          <div className="inline-flex items-center gap-3 mb-4">
+            <div className="w-12 h-1 rounded-full bg-gradient-to-r from-yellow-400 to-orange-400"></div>
+            <span className="text-sm font-medium tracking-wider text-yellow-400 uppercase">Get to know me</span>
+            <div className="w-12 h-1 rounded-full bg-gradient-to-r from-orange-400 to-yellow-400"></div>
+          </div>
+          <h2 className="mb-4 text-5xl font-bold text-transparent md:text-6xl bg-gradient-to-r from-white via-gray-100 to-gray-300 bg-clip-text">
+            About Me
+          </h2>
+          <p className="max-w-2xl mx-auto text-lg text-gray-400">
+            Passionate developer crafting digital experiences with modern technologies
+          </p>
+        </div>
+
+        {/* Main Content */}
+        <div className="flex flex-col items-start gap-20 lg:flex-row">
           {/* Left: Frontend Developer Section */}
-          <div className="space-y-6 md:w-1/2">
-            <h3 className="text-3xl font-bold text-yellow-400">Frontend Developer</h3>
-            <p className="text-lg leading-relaxed text-gray-300">
-              I am a creative and detail-oriented Frontend Developer with expertise in <span className="font-semibold text-white">HTML, CSS, JavaScript, React, and Tailwind</span>.
-              Passionate about building responsive, user-friendly websites with clean, modern designs. 
-              I focus on creating seamless user interfaces and ensuring top-notch performance across all devices.
-              I'm committed to continuous learning and staying updated with the latest technologies and web trends.
-            </p>
+          <div className="space-y-8 lg:w-1/2">
+            <div className="relative">
+              <div className="absolute w-8 h-8 rounded-full -top-2 -left-2 bg-yellow-400/20 blur-sm"></div>
+              <h3 className="relative text-4xl font-bold text-transparent bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text">
+                Frontend Developer
+              </h3>
+            </div>
+
+            <div className="relative p-8 border shadow-2xl bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm rounded-2xl border-white/10">
+              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-yellow-400 via-orange-400 to-red-400 rounded-t-2xl"></div>
+
+              <p className="text-lg leading-relaxed text-gray-300">
+                I am a creative and detail-oriented Frontend Developer with expertise in{" "}
+                <span className="relative inline-block">
+                  <span className="px-2 py-1 font-semibold text-white rounded-md bg-gradient-to-r from-yellow-400/20 to-orange-400/20">
+                    HTML, CSS, JavaScript, React, and Tailwind
+                  </span>
+                </span>
+                . Passionate about building responsive, user-friendly websites with clean, modern designs.
+              </p>
+
+              <div className="p-4 mt-6 border-l-4 border-yellow-400 bg-white/5 rounded-xl">
+                <p className="text-gray-300">
+                  I focus on creating seamless user interfaces and ensuring top-notch performance across all devices.
+                  I&#39;m committed to continuous learning and staying updated with the latest technologies and web trends.
+                </p>
+              </div>
+
+              {/* Skills Tags */}
+              <div className="flex flex-wrap gap-2 mt-6">
+                {["React", "JavaScript", "Tailwind CSS", "HTML5", "CSS3", "Responsive Design"].map((skill, index) => (
+                  <span
+                    key={skill}
+                    className="px-3 py-1 text-sm text-yellow-300 transition-all duration-300 border rounded-full bg-gradient-to-r from-yellow-400/10 to-orange-400/10 border-yellow-400/20 hover:from-yellow-400/20 hover:to-orange-400/20"
+                    style={{ animationDelay: `${index * 100}ms` }}
+                  >
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </div>
           </div>
 
           {/* Right: Education Section */}
-          <div className="space-y-8 md:w-1/2">
-            <h3 className="text-3xl font-bold text-yellow-400">Education</h3>
-            
-            <div className="space-y-4">
-              <div className="p-5 transition bg-white/10 rounded-xl hover:bg-white/20">
-                <h4 className="text-xl font-semibold">Bachelors of Information Management</h4>
-                <p className="text-gray-400">National College of Computer Studies (TU) | 2020 - Ongoing</p>
-              </div>
-
-              <div className="p-5 transition bg-white/10 rounded-xl hover:bg-white/20">
-                <h4 className="text-xl font-semibold">Higher Secondary Examination Board</h4>
-                <p className="text-gray-400">National College of Computer Studies (Management) | 2018 - 2020</p>
-              </div>
-
-              <div className="p-5 transition bg-white/10 rounded-xl hover:bg-white/20">
-                <h4 className="text-xl font-semibold">Secondary Education Examination</h4>
-                <p className="text-gray-400">Whitefield Higher Secondary School | 2005 - 2018</p>
-              </div>
+          <div className="space-y-8 lg:w-1/2">
+            <div className="relative">
+              <div className="absolute w-8 h-8 rounded-full -top-2 -left-2 bg-blue-400/20 blur-sm"></div>
+              <h3 className="relative text-4xl font-bold text-transparent bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text">
+                Education
+              </h3>
             </div>
 
             <div className="space-y-6">
@@ -49,21 +88,22 @@ const About = () => {
                   institution: "National College of Computer Studies (TU)",
                   period: "2020 - 2025",
                   status: "current",
-                  icon: "🎓",
+                  description:
+                    "Comprehensive study of information systems, database management, and software development methodologies.",
                 },
                 {
                   degree: "Higher Secondary Examination Board",
                   institution: "National College of Computer Studies (Management)",
                   period: "2018 - 2020",
                   status: "completed",
-                  icon: "📚",
+                  description: "Foundation in business management principles and computer applications.",
                 },
                 {
                   degree: "Secondary Education Examination",
                   institution: "Whitefield Higher Secondary School",
                   period: "2005 - 2018",
                   status: "completed",
-                  icon: "🏫",
+                  description: "Strong academic foundation with focus on science and mathematics.",
                 },
               ].map((edu, index) => (
                 <div
@@ -78,19 +118,20 @@ const About = () => {
                         <span className="text-xs font-medium text-green-400">Current</span>
                       </div>
                     ) : (
-                      <div className="w-2 h-2 bg-gray-400 rounded-full"></div>
+                      <div className="flex items-center gap-2">
+                        <div className="w-2 h-2 bg-blue-400 rounded-full"></div>
+                        <span className="text-xs font-medium text-blue-400">Completed</span>
+                      </div>
                     )}
                   </div>
 
-                  {/* Icon */}
-                  <div className="mb-3 text-2xl">{edu.icon}</div>
-
                   {/* Content */}
-                  <h4 className="mb-2 text-xl font-semibold text-white transition-colors duration-300 group-hover:text-yellow-300">
+                  <h4 className="pr-20 mb-2 text-xl font-semibold text-white transition-colors duration-300 group-hover:text-yellow-300">
                     {edu.degree}
                   </h4>
-                  <p className="mb-1 font-medium text-gray-400">{edu.institution}</p>
-                  <div className="flex items-center gap-2">
+                  <p className="mb-2 font-medium text-gray-400">{edu.institution}</p>
+
+                  <div className="flex items-center gap-2 mb-3">
                     <div className="w-4 h-4 text-gray-500">
                       <svg fill="currentColor" viewBox="0 0 20 20">
                         <path
@@ -103,23 +144,33 @@ const About = () => {
                     <p className="text-sm text-gray-500">{edu.period}</p>
                   </div>
 
+                  <p className="text-sm leading-relaxed text-gray-400">{edu.description}</p>
+
                   {/* Hover Effect Line */}
                   <div className="absolute bottom-0 left-0 w-0 h-1 transition-all duration-500 bg-gradient-to-r from-blue-400 to-purple-400 rounded-b-2xl group-hover:w-full"></div>
                 </div>
               ))}
             </div>
 
-            {/* Achievement Badge */}
-            <div className="p-4 mt-8 border bg-gradient-to-r from-yellow-400/10 to-orange-400/10 border-yellow-400/20 rounded-xl">
-              <div className="flex items-center gap-3">
-                <div className="text-2xl">🏆</div>
-                <div>
-                  <h4 className="font-semibold text-yellow-300">Academic Excellence</h4>
-                  <p className="text-sm text-gray-400">Consistently maintaining high academic standards</p>
-                </div>
-              </div>
-            </div>
+          
           </div>
+        </div>
+
+        {/* Stats Section */}
+        <div className="grid grid-cols-2 gap-8 mt-20 md:grid-cols-4">
+          {[
+            { number: "15+", label: "Projects Completed" },
+            { number: "1+", label: "Professional Experience" },
+            { number: "5+", label: "Technologies" },
+            { number: "100%", label: "Dedication" },
+          ].map((stat, index) => (
+            <div key={index} className="p-6 text-center border bg-white/5 rounded-xl backdrop-blur-sm border-white/10">
+              <div className="mb-2 text-3xl font-bold text-transparent md:text-4xl bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text">
+                {stat.number}
+              </div>
+              <div className="text-sm text-gray-400">{stat.label}</div>
+            </div>
+          ))}
         </div>
 
         {/* Bottom Decorative Element */}
