@@ -30,7 +30,7 @@ const Footer = () => {
               <div className="w-full h-1 rounded-full bg-gradient-to-r from-yellow-400 to-orange-400"></div>
             </div>
             <p className="max-w-md text-lg leading-relaxed text-gray-300 md:text-xl">
-              Ready to collaborate? Let's create something amazing together!
+              Ready to collaborate? Let&apos;s create something amazing together!
             </p>
 
             {/* Call to Action */}
